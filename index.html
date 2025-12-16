@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <style>
+/* Estilos CSS (Incluindo as melhorias anteriores) */
 body{
   margin:0;
   font-family:'Playfair Display', serif;
@@ -32,7 +33,10 @@ h1{
 }
 .section-title{
   margin-top:40px;
-  font-size:24px;
+  margin-bottom: 20px; 
+  font-size:26px; 
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 .service{
   background:#FFFFFF;
@@ -40,13 +44,12 @@ h1{
   padding:20px;
   max-width:350px;
   border-radius:20px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.06);
+  box-shadow:0 15px 30px rgba(0,0,0,0.08); 
 }
 .service img{
   width:100%;
   border-radius:15px;
   margin-bottom:15px;
-  /* Garante que todas as imagens de serviço tenham o mesmo formato visual */
   aspect-ratio: 1 / 1; 
   object-fit: cover;
 }
@@ -70,17 +73,22 @@ h1{
   text-decoration:none;
   border-radius:30px;
   font-size:16px;
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.1s;
+  border: 1px solid rgba(255, 255, 255, 0.5); 
+  font-weight: 500;
 }
 .btn:hover {
     background: #a9884c;
+    transform: translateY(-1px);
+}
+.contact-links .btn {
+    margin-bottom: 15px;
 }
 footer{
   margin:40px 0 20px;
   font-size:14px;
 }
 
-/* Melhoria: Estilos para telas maiores, colocando os serviços lado a lado */
 @media (min-width: 768px) {
     .services-container {
         display: flex;
@@ -91,9 +99,17 @@ footer{
         margin-bottom: 40px;
     }
     .service {
-        width: calc(33.333% - 20px); /* 3 por linha */
+        width: calc(33.333% - 20px); 
         max-width: 300px;
         margin: 0;
+    }
+    .contact-links {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+    }
+    .contact-links .btn {
+        width: 150px; 
     }
 }
 </style>
@@ -107,6 +123,9 @@ footer{
     Cílios & Sobrancelhas<br>
     Atendimento a domicílio • Macapá e Santana
   </div>
+  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20gostaria%20de%20agendar%20um%20serviço." target="_blank" style="margin-top: 20px;">
+    <i class="fab fa-whatsapp"></i> Agende seu Horário!
+  </a>
 </header>
 
 <div class="section-title">✨ Serviços & Valores</div>
@@ -114,7 +133,7 @@ footer{
 <div class="services-container">
 
     <div class="service">
-      <img src="imagem1.jpg" alt="Volume Brasileiro">
+      <img src="https://SEU-REPOSITORIO-GITHUB/volume-brasileiro.png" alt="Volume Brasileiro">
       <h3>Volume Brasileiro</h3>
       <div class="price">R$ 100</div>
       <p>Efeito elegante e marcante</p>
@@ -122,7 +141,7 @@ footer{
     </div>
 
     <div class="service">
-      <img src="imagem2.jpg" alt="Efeito Rímel">
+      <img src="https://SEU-REPOSITORIO-GITHUB/efeito-rimel.png" alt="Efeito Rímel">
       <h3>Efeito Rímel</h3>
       <div class="price">R$ 120</div>
       <p>Efeito natural com destaque</p>
@@ -130,7 +149,7 @@ footer{
     </div>
 
     <div class="service">
-      <img src="imagem3.jpg" alt="Volume Russo">
+      <img src="https://SEU-REPOSITORIO-GITHUB/volume-russo.png" alt="Volume Russo">
       <h3>Volume Russo</h3>
       <div class="price">R$ 130</div>
       <p>Volume intenso e glamouroso</p>
@@ -138,7 +157,7 @@ footer{
     </div>
 
     <div class="service">
-      <img src="imagem4.jpg" alt="Volume Egípcio">
+      <img src="https://SEU-REPOSITORIO-GITHUB/volume-egipcio.png" alt="Volume Egípcio">
       <h3>Volume Egípcio</h3>
       <div class="price">R$ 100</div>
       <p>Volume diferenciado e moderno</p>
@@ -146,17 +165,25 @@ footer{
     </div>
 
     <div class="service">
-      <img src="imagem5.jpg" alt="Clássico Fio a Fio">
+      <img src="https://SEU-REPOSITORIO-GITHUB/classico-fio-a-fio.png" alt="Clássico Fio a Fio">
       <h3>Clássico Fio a Fio</h3>
       <div class="price">R$ 90</div>
       <p>Delicado e natural</p>
       <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20quero%20agendar%20Clássico%20Fio%20a%20Fio%20(R$90)." target="_blank">Agendar</a>
     </div>
 
-</div> <div style="margin: 20px 0;">
-  <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20tenho%20uma%20pergunta." target="_blank" style="background:#57AA63;">
-    <i class="fab fa-whatsapp"></i> Fale Conosco
-  </a>
+</div>
+
+<div class="section-title">📞 Contatos e Redes</div>
+
+<div class="contact-links" style="max-width: 650px; margin: 20px auto 40px; padding: 0 20px;">
+    <a class="btn" href="https://wa.me/559691685603?text=Olá%20Geovana,%20tenho%20uma%20pergunta." target="_blank" style="background:#57AA63; flex-grow: 1;">
+      <i class="fab fa-whatsapp"></i> Fale Conosco (WhatsApp)
+    </a>
+    
+    <a class="btn" href="https://instagram.com/seuuser" target="_blank" style="background:#8B5E57; flex-grow: 1;">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
 </div>
 
 <footer>
