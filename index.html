@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cifra Fácil</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #020617;
+      padding: 16px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    .cifra {
+      background: #020617;
+      padding: 16px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      white-space: pre-wrap;
+    }
+    .titulo {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #38bdf8;
+    }
+    footer {
+      text-align: center;
+      padding: 12px;
+      font-size: 14px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <header>🎵 Cifra Fácil</header>  <div class="container">
+    <input type="text" id="search" placeholder="Pesquisar música ou artista..." onkeyup="filtrar()" /><div class="cifra" data-nome="Tocando em Frente">
+  <div class="titulo">Tocando em Frente - Almir Sater</div>
+  C  G  Am  F
+
+Ando devagar porque já tive pressa
+
+C  G  Am  F Levo esse sorriso porque já chorei </div>
+
+<div class="cifra" data-nome="Pra Você Guardei o Amor">
+  <div class="titulo">Pra Você Guardei o Amor - Nando Reis</div>
+  G  D  Em  C
+
+Pra você guardei o amor
+
+G  D  Em  C Que nunca soube dar </div>
+
+<div class="cifra" data-nome="Tempo Perdido">
+  <div class="titulo">Tempo Perdido - Legião Urbana</div>
+  D  A  Bm  G
+
+Todos os dias quando acordo
+
+D  A  Bm  G Não tenho mais o tempo que passou </div>
+
+  </div>  <footer>© 2025 - Cifra Fácil</footer>  <script>
+    function filtrar() {
+      const termo = document.getElementById('search').value.toLowerCase();
+      const cifras = document.querySelectorAll('.cifra');
+
+      cifras.forEach(cifra => {
+        const nome = cifra.getAttribute('data-nome').toLowerCase();
+        cifra.style.display = nome.includes(termo) ? 'block'
